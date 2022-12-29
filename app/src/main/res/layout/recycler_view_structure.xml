@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="meditation_session_data"
+            type="com.shubham.awarebreath.database.MeditationSessionData" />
+
+        <variable
+            name="shared_view_model"
+            type="com.shubham.awarebreath.viewModel.SharedViewModel" />
+        <variable
+            name="view_model"
+            type="com.shubham.awarebreath.viewModel.CustomMeditationFragmentViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:onLongClick="@{() -> view_model.deleteById(meditation_session_data.id)}"
+        android:paddingBottom="10dp">
+
+
+        <androidx.cardview.widget.CardView
+            set_color_cv="@{meditation_session_data.color}"
+            android:layout_width="320dp"
+            android:layout_height="175dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="#0996EA"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:id="@+id/linerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:onClick="@{() -> shared_view_model.meditationClicked(meditation_session_data.inhaleT,meditation_session_data.inhaleH,meditation_session_data.exhaleT,meditation_session_data.exhaleH,meditation_session_data.guidedMode,meditation_session_data.unguidedMode,meditation_session_data.instructionVoice,meditation_session_data.music,meditation_session_data.musicInUnguidedMode,false)}"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:text="@{meditation_session_data.name}"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text='@{meditation_session_data.time + " minute" }'
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Guided"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text='@{meditation_session_data.guidedPercentage + "%"}'
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Unuided"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text='@{meditation_session_data.unguidedPercentage + "%"}'
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="-20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/flower_img"
+                    app:tint="@color/white" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-120dp"
+            android:layout_marginTop="-200dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="25dp">
+
+            <ImageView
+                image_set_id="@{meditation_session_data.displayPicture}"
+                android:layout_width="140dp"
+                android:layout_height="175dp"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</layout>

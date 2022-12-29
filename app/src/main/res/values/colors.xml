@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="create_meditation_card_view_background">#EBF3FA</color>
+
+<!--    colorPicker color-->
+    <color name="c1">#b10060</color>
+    <color name="c2">#00aeae</color>
+    <color name="c3">#e7c800</color>
+    <color name="c4">#847704 </color>
+    <color name="c5">#ff7f00</color>
+    <color name="c6">#9e00ca</color>
+    <color name="c7">#da418b</color>
+    <color name="c8">#371fd2</color>
+    <color name="c9">#00bb40</color>
+    <color name="c10">#009787</color>
+    <color name="c11">#007eda</color>
+    <color name="c12">#b85b0f</color>
+    <!--    colorPicker color-->
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/analyticListFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.shubham.awarebreath.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_meditationFragment"
+            app:destination="@id/meditationFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/storyFragment"
+        android:name="com.shubham.awarebreath.fragments.StoryFragment"
+        android:label="fragment_story"
+        tools:layout="@layout/fragment_story" />
+    <fragment
+        android:id="@+id/meditationFragment"
+        android:name="com.shubham.awarebreath.fragments.MeditationFragment"
+        android:label="MeditationFragment" >
+        <action
+            android:id="@+id/action_meditationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_meditationFragment_to_customMeditationFragment"
+            app:destination="@id/customMeditationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createMeditationSessionFragment"
+        android:name="com.shubham.awarebreath.fragments.CreateMeditationSessionFragment"
+        android:label="CreateMeditationSessionFragment" >
+        <action
+            android:id="@+id/action_createMeditationSessionFragment_to_customMeditationFragment"
+            app:destination="@id/customMeditationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customMeditationFragment"
+        android:name="com.shubham.awarebreath.fragments.CustomMeditationFragment"
+        android:label="CustomMeditationFragment" >
+        <action
+            android:id="@+id/action_customMeditationFragment_to_createMeditationSessionFragment"
+            app:destination="@id/createMeditationSessionFragment" />
+        <action
+            android:id="@+id/action_customMeditationFragment_to_meditationFragment"
+            app:destination="@id/meditationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/analyticListFragment"
+        android:name="com.shubham.awarebreath.fragments.AnalyticListFragment"
+        android:label="AnalyticListFragment" />
+</navigation>

@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="view_model"
+            type="com.shubham.awarebreath.viewModel.CreateMeditationSessionFragmentViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:id="@+id/create_meditation_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            set_visibility_of_dp="@{view_model.visibility}"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_a"
+                        android:layout_width="140dp"
+                        android:layout_height="175dp"
+                        image_set="@{@string/place_holder}"
+                        android:tag="@string/place_holder"
+                        android:onClick="@{() -> view_model.displayPictureSelected(@string/place_holder)}"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_b"
+                        android:layout_width="140dp"
+                        android:layout_height="175dp"
+                        image_set="@{@string/img_1}"
+                        android:tag="@string/img_1"
+                        android:onClick="@{() -> view_model.displayPictureSelected(@string/img_1)}"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="175dp"
+                        image_set="@{@string/img_b}"
+                        android:tag="@string/img_b"
+                        android:onClick="@{() -> view_model.displayPictureSelected(@string/img_b)}"                    android:scaleType="centerCrop"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="175dp"
+                        image_set="@{@string/img_c}"
+                        android:tag="@string/img_c"
+                        android:onClick="@{() -> view_model.displayPictureSelected(@string/img_c)}"                    android:scaleType="centerCrop"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="175dp"
+                        android:src="@drawable/img_b"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="175dp"
+                        android:src="@drawable/img_c"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="175dp"
+                        android:src="@drawable/place_holder"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="175dp"
+                        android:src="@drawable/place_holder"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="175dp"
+                        android:src="@drawable/place_holder"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="25dp"
+                    android:layout_margin="10dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="175dp"
+                        android:src="@drawable/place_holder"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            set_visibility_of_Cm="@{view_model.visibility}"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Appearance"
+                android:textColor="@color/black"
+                android:textSize="27dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="@color/create_meditation_card_view_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/meditationName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:hint="Meditation Name"
+                            android:textColor="#FF5023"
+                            android:textSize="24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="give name to meditation"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="13dp"
+                    android:src="@drawable/ic_meditatin_name" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="@color/create_meditation_card_view_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/meditationTime"
+                                check_time="@{view_model.meditationTime}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:hint="10 "
+                                android:inputType="number"
+                                android:text="@={view_model.meditationTime}"
+                                android:textColor="#FFFF5023"
+                                android:textSize="24sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Minute"
+                                    android:textSize="24sp" />
+
+                                <View
+                                    android:layout_width="70dp"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@color/black" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="select time"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="13dp"
+                    android:src="@drawable/ic_meditation_time" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="@{() -> view_model.displayPictureClicked()}"
+                    app:cardBackgroundColor="@color/create_meditation_card_view_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="12dp">
+
+                            <ImageView
+                                android:id="@+id/image"
+                                image_set="@{view_model.image}"
+                                android:layout_width="70dp"
+                                android:layout_height="88dp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/place_holder"
+                                android:tag="@{view_model.image}" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Select Display Picture"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="13dp"
+                    android:src="@drawable/ic_display_picture" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="@color/create_meditation_card_view_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c1"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(1) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{1}" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c2"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(2) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{2}" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c3"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(3) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{3}" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c4"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(4) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{4}" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c5"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(5) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{5}" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c6"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(6) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{6}" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c7"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(7) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{7}" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c8"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(8) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{8}" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c9"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(9) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{9}" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c10"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(10) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{10}" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c11"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(11) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{11}" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_margin="4dp"
+                                android:backgroundTint="@color/c12"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:onClick="@{() -> view_model.colorClicked(12) }"
+                                app:cardCornerRadius="5dp"
+                                app:colorPickerData="@{view_model.colorPickerData}"
+                                app:currentColor="@{12}" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Select Color"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="13dp"
+                    android:src="@drawable/ic_color_picker" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Guided Mode"
+                android:textColor="@color/black"
+                android:textSize="27dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="@color/create_meditation_card_view_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Inhale"
+                                android:textSize="24sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    check_rhythm="@{view_model.inhaleT}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:hint="10 "
+                                    android:inputType="number"
+                                    android:text="@={view_model.inhaleT}"
+                                    android:textSize="24sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="-2dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="sec."
+                                        android:textSize="24sp" />
+
+                                    <View
+                                        android:layout_width="40dp"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="2dp"
+                                        android:background="@color/black" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="21dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="2dp"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Hold"
+                                android:textSize="24sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    check_rhythm="@{view_model.inhaleHoldT}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:hint="10 "
+                                    android:inputType="number"
+                                    android:text="@={view_model.inhaleHoldT}"
+                                    android:textSize="24sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="-2dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="sec."
+                                        android:textSize="24sp" />
+
+                                    <View
+                                        android:layout_width="40dp"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="2dp"
+                                        android:background="@color/black" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Exhale"
+                                android:textSize="24sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    check_rhythm="@{view_model.exhaleT}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:hint="10 "
+                                    android:inputType="number"
+                                    android:text="@={view_model.exhaleT}"
+                                    android:textSize="24sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="-2dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="sec."
+                                        android:textSize="24sp" />
+
+                                    <View
+                                        android:layout_width="40dp"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="2dp"
+                                        android:background="@color/black" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="2dp"
+                                android:background="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Hold"
+                                android:textSize="24sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    check_rhythm="@{view_model.exhaleHoldT}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:hint="10 "
+                                    android:inputType="number"
+                                    android:text="@={view_model.exhaleHoldT}"
+                                    android:textSize="24sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="-2dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="sec."
+                                        android:textSize="24sp" />
+
+                                    <View
+                                        android:layout_width="40dp"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="2dp"
+                                        android:background="@color/black" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Breathing Rhythm"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="13dp"
+                    android:src="@drawable/ic_meditation_rhythm" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="@color/create_meditation_card_view_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Guided Mode "
+                                android:textSize="24sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:id="@+id/guidedModePercentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:hint="10 "
+                                    android:inputType="number"
+                                    android:text="@={view_model.percentage}"
+                                    android:textSize="24sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="-2dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:text="%"
+                                        android:textSize="24sp" />
+
+                                    <View
+                                        android:layout_width="15dp"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="2dp"
+                                        android:background="@color/black" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Time of guided mode is "
+                                android:textSize="14sp" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="4 Minute"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:flag="@{true}"
+                                app:percentage="@{view_model.percentage}"
+                                app:time="@{view_model.meditationTime}" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="13dp"
+                    android:src="@drawable/ic_guided_percentage" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="@{() -> view_model.instructionVoiceClicked()}"
+                    app:cardBackgroundColor="@color/create_meditation_card_view_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Instuction Voice"
+                                android:textSize="24sp" />
+
+                            <ImageView
+                                img_src="@{view_model.voiceVisibility}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_add" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            set_visibility_tv="@{view_model.voiceVisibility}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@{view_model.voiceName}"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            set_visibility_l="@{view_model.voiceVisibility}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:onClick='@{() -> view_model.voiceSelected(true)}'
+                                    android:text="Alex"
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:onClick='@{() -> view_model.voiceSelected(false)}'
+                                    android:text="Lubina"
+                                    android:textSize="16sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="13dp"
+                    android:src="@drawable/ic_instuction_voice" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="@{() -> view_model.musicClicked()}"
+                    app:cardBackgroundColor="@color/create_meditation_card_view_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Music                   "
+                                android:textSize="24sp" />
+
+                            <ImageView
+                                img_src="@{view_model.musicVisibility}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_add" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            set_visibility_tv="@{view_model.musicVisibility}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@{view_model.musicName}"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            set_visibility_l="@{view_model.musicVisibility}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:onClick='@{() -> view_model.musicSelected(true)}'
+                                    android:text="Bell"
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:onClick='@{() -> view_model.musicSelected(false)}'
+                                    android:text="Flute"
+                                    android:textSize="16sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="13dp"
+                    android:src="@drawable/ic_music" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Unguided Mode"
+                android:textColor="@color/black"
+                android:textSize="27dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="@color/create_meditation_card_view_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Unguided Mode "
+                                android:textSize="24sp" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="6dp"
+                                android:ems="2"
+                                android:fontFamily="sans-serif-condensed"
+                                android:hint="60 %"
+                                android:inputType="number"
+                                android:textSize="24sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Time of unguided mode is "
+                                android:textSize="14sp" />
+
+
+                            <TextView
+                                percentage="@{view_model.percentage}"
+                                time="@{view_model.meditationTime}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="6 Minute"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:flag="@{false}" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="13dp"
+                    android:src="@drawable/ic_unguided_percentage" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="@color/create_meditation_card_view_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switchUnguided"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Music "
+                                android:textSize="24sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Want to play music in unguided mode "
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="13dp"
+                    android:src="@drawable/ic_music_pause" />
+
+
+            </RelativeLayout>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="save to database"
+                android:onClick='@{() -> view_model.createMeditationSession(meditationName.getText(),meditationTime.getText(), image.getTag().toString(), guidedModePercentage.getText(), switchUnguided.isChecked()) }'
+                />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</layout>

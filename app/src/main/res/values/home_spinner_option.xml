@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="home_spinner_option">
+        <item>Unlimited Mode</item>
+        <item>Breath Mode</item>
+        <item>Sleep Mode</item>
+    </string-array>
+
+</resources>
