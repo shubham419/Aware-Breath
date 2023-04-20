@@ -18,7 +18,6 @@ class AnalyticListFragmentViewModel(val context: Context) : ViewModel() {
 
     private val repository : AnalyticRepository
     private val adapter = AnalyticListAdapter()
-
     lateinit var data : LiveData<List<AnalyticListData>>
 
     init {
