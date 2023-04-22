@@ -13,6 +13,7 @@ class AnalyticListAdapter : RecyclerView.Adapter<AnalyticListAdapter.MyViewHolde
 //    var list = mutableListOf<AnalyticListData>()
 
     private val diffUtil = object : DiffUtil.ItemCallback<AnalyticListData>() {
+
         override fun areItemsTheSame(
             oldItem: AnalyticListData,
             newItem: AnalyticListData
@@ -29,7 +30,7 @@ class AnalyticListAdapter : RecyclerView.Adapter<AnalyticListAdapter.MyViewHolde
 
     }
      val differ = AsyncListDiffer(this, diffUtil)
-    var analytics: List<AnalyticListData>
+    private var analytics: List<AnalyticListData>
         get() = differ.currentList
         set(value) {
             differ.submitList(value)

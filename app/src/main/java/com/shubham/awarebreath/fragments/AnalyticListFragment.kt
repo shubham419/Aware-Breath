@@ -18,7 +18,7 @@ import com.shubham.awarebreath.viewModelFactory.CustomMeditationFragmentViewMode
 class AnalyticListFragment : Fragment() {
     private var _binding: FragmentAnalyticListBinding? = null
     private val binding get() = _binding!!
-    private lateinit var analyticListAdapter: AnalyticListAdapter
+    private  var analyticListAdapter: AnalyticListAdapter = AnalyticListAdapter()
     private lateinit var analyticList: List<AnalyticListData>
     private lateinit var viewModel: AnalyticListFragmentViewModel
 
@@ -29,27 +29,20 @@ class AnalyticListFragment : Fragment() {
     ): View? {
         _binding = FragmentAnalyticListBinding.inflate(inflater, container, false)
 
-        viewModel = ViewModelProvider(
-            this,
-            AnalyticListFragmentViewModelFactory(requireContext())
-        )[AnalyticListFragmentViewModel::class.java]
-
-        viewModel.data.observe(viewLifecycleOwner, Observer {
+        viewModel =
+            ViewModelProvider(this, AnalyticListFragmentViewModelFactory(requireContext()))[AnalyticListFragmentViewModel::class.java]
+        viewModel.data.observe(viewLifecycleOwner) {
             analyticListAdapter.differ.submitList(it)
-            analyticList = it
-        })
+            analyticList=it
+
+        }
        binding.recyclerView.adapter=analyticListAdapter
 
 
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
-
-
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
