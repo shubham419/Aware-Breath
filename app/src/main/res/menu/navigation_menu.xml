@@ -8,12 +8,12 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/analyticListFragment"
-        android:title="Analytic"
+        android:id="@+id/customMeditationFragment"
+        android:title="Create"
         android:icon="@drawable/ic_custom_fragment"/>
 
     <item
-        android:id="@+id/customMeditationFragment"
-        android:title="Story"
-        android:icon="@drawable/ic_analytic_fragment"/>
+        android:id="@+id/analyticListFragment"
+        android:title="Analytic"
+        android:icon="@drawable/ic_analytic"/>
 </menu>

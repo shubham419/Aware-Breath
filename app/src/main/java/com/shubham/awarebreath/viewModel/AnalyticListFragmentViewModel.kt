@@ -14,7 +14,7 @@ import com.shubham.awarebreath.repository.AnalyticRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class AnalyticListFragmentViewModel(val context: Context) : ViewModel() {
+class AnalyticListFragmentViewModel(context: Context) : ViewModel() {
 
     private val repository : AnalyticRepository
     private val adapter = AnalyticListAdapter()
@@ -29,12 +29,12 @@ class AnalyticListFragmentViewModel(val context: Context) : ViewModel() {
     }
 
     private fun putData() {
-        val analyticListData = AnalyticListData(0,0,"successful")
-        val breathData = BreathData(0,analyticListData,0,0,0,0,0)
+//        val analyticListData = AnalyticListData(0,0,"successful")
+//        val breathData = BreathData(0,analyticListData,0,0,0,0,0)
 
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.insertBreathData(breathData)
-        }
+//        viewModelScope.launch(Dispatchers.IO) {
+//            repository.insertBreathData(breathData)
+//        }
     }
 
     private fun loadData() {

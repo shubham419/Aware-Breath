@@ -10,5 +10,6 @@ data class AnimationData(
     val voice: Boolean,
     val music: Boolean,
     val musicInUnguidedMode: Boolean,
-    val backPressHandler: Boolean
+    val backPressHandler: Boolean,
+    val meditationTitle: String = "Default"
 )

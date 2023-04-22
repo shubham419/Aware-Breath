@@ -16,6 +16,7 @@ import com.shubham.awarebreath.R
 import com.shubham.awarebreath.databinding.FragmentMeditationBinding
 import com.shubham.awarebreath.viewModel.MeditationFragmentViewModel
 import com.shubham.awarebreath.viewModel.SharedViewModel
+import com.shubham.awarebreath.viewModelFactory.MeditationFragmentViewModelFactory
 
 
 class MeditationFragment : Fragment() {
@@ -24,6 +25,7 @@ class MeditationFragment : Fragment() {
     private val sharedViewModel: SharedViewModel by activityViewModels()
     private lateinit var mediaPlayer: MediaPlayer
     private lateinit var music1: MediaPlayer
+    private lateinit var viewModel : MeditationFragmentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +35,7 @@ class MeditationFragment : Fragment() {
         activity?.findViewById<BottomNavigationView>(R.id.activity_main_bottom_navigation_view)?.visibility =
             View.GONE
 
-        val viewModel = ViewModelProvider(this)[MeditationFragmentViewModel::class.java]
+        viewModel = ViewModelProvider(this, MeditationFragmentViewModelFactory(requireContext().applicationContext))[MeditationFragmentViewModel::class.java]
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
@@ -114,6 +116,11 @@ class MeditationFragment : Fragment() {
     override fun onPause() {
         super.onPause()
         music1.pause()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        viewModel.saveData()
     }
 
 

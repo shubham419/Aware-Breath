@@ -1,16 +1,29 @@
 package com.shubham.awarebreath.viewModel
 
+import android.content.Context
 import android.os.CountDownTimer
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.shubham.awarebreath.database.AnalyticListData
+import com.shubham.awarebreath.database.BreathData
+import com.shubham.awarebreath.database.BreathDataBase
 import com.shubham.awarebreath.model.AnimationData
 import com.shubham.awarebreath.model.FlowerAdapterModel
+import com.shubham.awarebreath.repository.AnalyticRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.*
 import java.util.concurrent.TimeUnit
 
-class MeditationFragmentViewModel : ViewModel() {
+class MeditationFragmentViewModel(context: Context) : ViewModel() {
 
 
+    //-----------------animation of flower -----------------
+    private val repository : AnalyticRepository
     //-----------------animation of flower -----------------
     private var inhaleH: Int = 0
     private var exhaleH: Int = 0
@@ -50,12 +63,37 @@ class MeditationFragmentViewModel : ViewModel() {
     val state: LiveData<Boolean> get() = stateObject
     private val _visibility = MutableLiveData<Boolean>(true)
     val visibility: LiveData<Boolean> get() = _visibility
+    //-----------------Breath Data----------------------------
+    var meditationTitle = "default"
+    var meditationTime = 10
 
+    init {
+        val dao = BreathDataBase.getBreathDatabase(context).breathDataDao()
+        repository = AnalyticRepository(dao)
+    }
 
+    fun saveData(){
+        val calendar = Calendar.getInstance()
+        val day = calendar.get(Calendar.DATE)
+        val month_date = SimpleDateFormat("MMM")
+        val df = SimpleDateFormat("hh:mm a")
+        val month_name = month_date.format(calendar.time)
+        val date = "$month_name $day"
+        val currentTime = df.format(calendar.time)
+        val completedDuration = time.value.toString()
+        val analyticListData = AnalyticListData(date,currentTime,meditationTitle)
+        val breathData = BreathData(0,analyticListData,noOfBreath,noOfAwareBreath,noOfUnawareBreath,meditationTime,completedDuration)
+
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.insertBreathData(breathData)
+        }
+    }
 
     fun startTimer(animationData: AnimationData) {
+        meditationTitle = animationData.meditationTitle
         val guidedTime = animationData.guidedTime
         val unguidedTime = animationData.unguidedTime
+        meditationTime = guidedTime + unguidedTime
         val totalTime = TimeUnit.MINUTES.toMillis ((guidedTime + unguidedTime).toLong()) + 5000
         object : CountDownTimer(totalTime, 1000) {
             override fun onTick(millisUntilFinished: Long) {

@@ -56,7 +56,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20 jan"
+                        android:text="@{analytic_list_data.date}"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
                         android:textSize="20sp"
@@ -73,7 +73,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3:00 PM"
+                        android:text="@{analytic_list_data.time}"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
                         android:textSize="20sp"
@@ -88,7 +88,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Basic Meditation"
+                        android:text="@{analytic_list_data.nameOfMeditation}"
                         android:fontFamily="sans-serif-light"
                         android:textSize="20sp"
                         />

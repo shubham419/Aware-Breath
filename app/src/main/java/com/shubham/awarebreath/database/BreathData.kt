@@ -12,6 +12,5 @@ data class BreathData(
     val totalAwareBreath: Int,
     val totalUnawareBreath: Int,
     val totalDuration: Int,
-    val CompletedDuration: Int,
-
+    val CompletedDuration: String,
 )

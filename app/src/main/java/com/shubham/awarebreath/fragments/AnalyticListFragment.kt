@@ -28,7 +28,7 @@ class AnalyticListFragment : Fragment() {
 
         val viewModel = ViewModelProvider(
             this,
-            AnalyticListFragmentViewModelFactory(requireContext())
+            AnalyticListFragmentViewModelFactory(requireContext().applicationContext)
         )[AnalyticListFragmentViewModel::class.java]
 
         viewModel.data.observe(viewLifecycleOwner, Observer {
