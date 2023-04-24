@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.shubham.awarebreath.adapter.AnalyticListAdapter
+import com.shubham.awarebreath.database.AnalyticListData
 import com.shubham.awarebreath.databinding.FragmentAnalyticListBinding
 import com.shubham.awarebreath.viewModel.AnalyticListFragmentViewModel
 import com.shubham.awarebreath.viewModel.CustomMeditationFragmentViewModel
@@ -15,31 +16,45 @@ import com.shubham.awarebreath.viewModelFactory.AnalyticListFragmentViewModelFac
 import com.shubham.awarebreath.viewModelFactory.CustomMeditationFragmentViewModelFactory
 
 class AnalyticListFragment : Fragment() {
-
-    private lateinit var binding: FragmentAnalyticListBinding
-    private val adapter = AnalyticListAdapter()
+    private var _binding: FragmentAnalyticListBinding? = null
+    private val binding get() = _binding!!
+    private  var analyticListAdapter: AnalyticListAdapter = AnalyticListAdapter()
+    private lateinit var analyticList: List<AnalyticListData>
+    private lateinit var viewModel: AnalyticListFragmentViewModel
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+<<<<<<< HEAD
+        _binding = FragmentAnalyticListBinding.inflate(inflater, container, false)
+=======
         binding = FragmentAnalyticListBinding.inflate(inflater, container, false)
 
         val viewModel = ViewModelProvider(
             this,
             AnalyticListFragmentViewModelFactory(requireContext().applicationContext)
         )[AnalyticListFragmentViewModel::class.java]
+>>>>>>> 59421e7415d2e4ae9ffa1f64b9ca422a0068227b
 
-        viewModel.data.observe(viewLifecycleOwner, Observer {
-            it
-            adapter.setContentList(it.toMutableList())
-        })
+        viewModel =
+            ViewModelProvider(this, AnalyticListFragmentViewModelFactory(requireContext()))[AnalyticListFragmentViewModel::class.java]
+        viewModel.data.observe(viewLifecycleOwner) {
+            analyticListAdapter.differ.submitList(it)
+            analyticList=it
 
-        binding.recyclerView.adapter = adapter
+        }
+       binding.recyclerView.adapter=analyticListAdapter
 
 
         return binding.root
     }
 
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

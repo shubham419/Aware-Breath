@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.AnalyticsFragment">
+
+    <ImageView
+        android:id="@+id/displayPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/flower" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/actualName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual name"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/actualTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual time"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inhale T: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/inhaleT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual inhaleT"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inhale H: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/inhaleH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual inhaleH"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exhale T: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/exhaleT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual exhaleT"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exhale H: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/exhaleH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual exhaleH"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guided mode: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/guidedMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guided Mode"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unguided mode: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/unguidedMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unguided mode"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unguided Percentage: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/unguidedPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual unguidedPercentage"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guided Percentage: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/guidedPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual guidedPercentage"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instruction voice: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/instructionVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual instructionVoice"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual music"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music In UnguidedMode: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/musicInUnguidedMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actual musicInUnguidedMode"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -54,6 +54,7 @@
                         />
 
                     <TextView
+                        android:id="@+id/actualDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@{analytic_list_data.date}"
@@ -71,6 +72,7 @@
                         />
 
                     <TextView
+                        android:id="@+id/actualTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@{analytic_list_data.time}"
@@ -86,6 +88,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/meditationName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@{analytic_list_data.nameOfMeditation}"
