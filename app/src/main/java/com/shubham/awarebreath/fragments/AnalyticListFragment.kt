@@ -27,7 +27,16 @@ class AnalyticListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+<<<<<<< HEAD
         _binding = FragmentAnalyticListBinding.inflate(inflater, container, false)
+=======
+        binding = FragmentAnalyticListBinding.inflate(inflater, container, false)
+
+        val viewModel = ViewModelProvider(
+            this,
+            AnalyticListFragmentViewModelFactory(requireContext().applicationContext)
+        )[AnalyticListFragmentViewModel::class.java]
+>>>>>>> 59421e7415d2e4ae9ffa1f64b9ca422a0068227b
 
         viewModel =
             ViewModelProvider(this, AnalyticListFragmentViewModelFactory(requireContext()))[AnalyticListFragmentViewModel::class.java]

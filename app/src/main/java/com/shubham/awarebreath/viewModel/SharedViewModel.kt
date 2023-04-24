@@ -20,8 +20,8 @@ class SharedViewModel: ViewModel() {
     val animationData : LiveData<AnimationData> = _animationData
 
 
-    fun meditationClicked(inhaleT: Int, inhaleH: Int, exhaleT: Int, exhaleH: Int, guidedTime: Int, unguidedTime:Int, voice: Boolean, music:Boolean, musicInUnguidedMode:Boolean, backPressHandler:Boolean){
-        val data = AnimationData(inhaleT,inhaleH,exhaleT,exhaleH,guidedTime,unguidedTime,voice,music,musicInUnguidedMode,backPressHandler)
+    fun meditationClicked(inhaleT: Int, inhaleH: Int, exhaleT: Int, exhaleH: Int, guidedTime: Int, unguidedTime:Int, voice: Boolean, music:Boolean, musicInUnguidedMode:Boolean, backPressHandler:Boolean,meditationTitle: String = "default"){
+        val data = AnimationData(inhaleT,inhaleH,exhaleT,exhaleH,guidedTime,unguidedTime,voice,music,musicInUnguidedMode,backPressHandler,meditationTitle)
         _animationData.value = data
         _transition.value = true
         _transition.value = false

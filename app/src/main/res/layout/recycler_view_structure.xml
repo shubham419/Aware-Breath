@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="90dp"
-                android:onClick="@{() -> shared_view_model.meditationClicked(meditation_session_data.inhaleT,meditation_session_data.inhaleH,meditation_session_data.exhaleT,meditation_session_data.exhaleH,meditation_session_data.guidedMode,meditation_session_data.unguidedMode,meditation_session_data.instructionVoice,meditation_session_data.music,meditation_session_data.musicInUnguidedMode,false)}"
+                android:onClick="@{() -> shared_view_model.meditationClicked(meditation_session_data.inhaleT,meditation_session_data.inhaleH,meditation_session_data.exhaleT,meditation_session_data.exhaleH,meditation_session_data.guidedMode,meditation_session_data.unguidedMode,meditation_session_data.instructionVoice,meditation_session_data.music,meditation_session_data.musicInUnguidedMode,false,meditation_session_data.name)}"
                 android:orientation="vertical"
                 android:padding="5dp">
 
